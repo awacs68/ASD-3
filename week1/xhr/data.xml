@@ -1,0 +1,46 @@
+<information>
+             <contacts>
+               <fname>Mark</fname>
+               <lname>McAninch</lname>
+               <year>2000</year>
+               <make>GMC</make>
+               <model>Jimmy</model>
+               <repairs>Replace wheel bearing</repairs>
+             </contacts>
+
+             <contacts>
+                <fname>Jan</fname>
+                <lname>McAninch</lname>
+                <year>2008</year>
+                <make>Chevy</make>
+                <model>Cobalt</model>
+                <repairs>LOF</repairs>
+             </contacts> 
+
+             <contacts>
+                <fname>Ashley</fname>
+                <lname>Beatty</lname>
+                <year>2001</year>
+                <make>Ford</make>
+                <model>Explorer</model>
+                <repairs>LOF</repairs>
+             </contacts>
+
+             <contacts>
+                <fname>Bri-Ann</fname>
+                <lname>Beatty</lname>
+                <year>2006</year>
+                <make>Pontiac</make>
+                <model>Montana</model>
+                <repairs>LOF</repairs>
+             </contacts>
+
+             <contacts>
+                <fname>Austin</fname>
+                <lname>McAninch</lname>
+                <year>1999</year>
+                <make>Chevy</make>
+                <model>Malibu</model>
+                <repairs>LOF</repairs>
+             </contacts>
+</information>
