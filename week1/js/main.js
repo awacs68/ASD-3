@@ -4,7 +4,7 @@
 
 // Save Function //
 
-$("img").animate({width: "40%"},1500);
+$("img").animate({width: "50%"},1500);
 
 $('#form').on('pageinit', function(){
    
@@ -34,7 +34,7 @@ $('#form').on('pageinit', function(){
 
 // Edit Function //
 
-$('#edit').click(function(){ 
+$('#edit').on('click', function(){ 
   
   var myForm = $('#ownerform');
         myForm.validate({
@@ -45,9 +45,15 @@ $('#edit').click(function(){
     }
   });
  var getData = function(key){
- var id = Math.floor(Math.random()*1000001); 
+ var id = Math.floor(Math.random()*1000001);
+ var item = {}; 
   $('#firstname').val('Mark');
   $('#lastname').val('McAninch');
+  $('#year').val('2000');
+  $('#make').val('GMC');
+  $('#model').val('Jimmy');
+  $('#repairs').val('Changed, wheel, bearing');
+localStorage.getItem(id, JSON.stringify(item));
   alert("The form will be populated with dummy data!");
  };
  
