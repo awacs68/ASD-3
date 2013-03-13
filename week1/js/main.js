@@ -30,34 +30,30 @@ $('#form').on('pageinit', function(){
       localStorage.setItem(id, JSON.stringify(item));
   alert("Information Saved!");
  };
- });
-
-// Edit Function //
-$('#ownerform').on('pageinit', function(){
-//$('#edit').on('click', function(){});
-   
- function init(){
-  if(localStorage['firstname']){
-    $('#firstname').val(locaStorage['firstname']);
-  }
- }
- init(); 
-  
-$('.required').key(function(){
-  localStorage[$(this).attr('firstname')] = $(this).val();
-});
-$('#ownerform').submit(function(){
-  localStorage.clear();
-});
-
  
-});
+
+// Get Data Function //
+
+function getData(){
+  for (var i = 0; i < localStorage.length; i++){
+   $('form').append(localStorage.getItem(localStorage.key(i)));
+        var item = JSON.parse(value);
+
+ // Populate the form fields with current localStorage values.
+    
+        $("#firstname").val = item.fname[i];
+        $("#lastname").val = item.lname[i];
+        $("#year").val = item.year[i];
+        $("#make").val = item.make[i];
+        $("#model").val = item.model[i];
+        $("#repairs").val = item.repairs[i];
+}
+    }
+    });
 // Delete Function //
 
 
 // Static Remote Data //
-
-
 
 $('#loaddatapage').on('pageinit', function(){ 
 
