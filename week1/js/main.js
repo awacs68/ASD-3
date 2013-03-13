@@ -33,34 +33,25 @@ $('#form').on('pageinit', function(){
  });
 
 // Edit Function //
-
-$('#edit').on('click', function(){ 
+$('#ownerform').on('pageinit', function(){
+//$('#edit').on('click', function(){});
+   
+ function init(){
+  if(localStorage['firstname']){
+    $('#firstname').val(locaStorage['firstname']);
+  }
+ }
+ init(); 
   
-  var myForm = $('#ownerform');
-        myForm.validate({
-      invalidHandler: function(myForm, validator) {},
-      submitHandler: function() {
-    var data = myForm.serializeArray();
-    getData(data);
-    }
-  });
- var getData = function(key){
- var id = Math.floor(Math.random()*1000001);
- var item = {}; 
-  $('#firstname').val('Mark');
-  $('#lastname').val('McAninch');
-  $('#year').val('2000');
-  $('#make').val('GMC');
-  $('#model').val('Jimmy');
-  $('#repairs').val('Changed, wheel, bearing');
-localStorage.getItem(id, JSON.stringify(item));
-  alert("The form will be populated with dummy data!");
- };
+$('.required').key(function(){
+  localStorage[$(this).attr('firstname')] = $(this).val();
+});
+$('#ownerform').submit(function(){
+  localStorage.clear();
+});
+
  
 });
-  
-
- 
 // Delete Function //
 
 

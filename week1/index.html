@@ -45,21 +45,22 @@
      <h1>Owner Information</h1>
       <p> * Indicates Required Field </p>
        <div>
-        <label for="firstname">* First Name:</label>
-        <input type="text" name="firstname" id="firstname" class="required" />
-        <label for="lastname">* Last Name:</label>
-        <input type="text" name="lastname" id="lastname" class="required" />
-        <label for="year">* Year of Vehicle:</label>
-        <input type="range" name="year" id="year" class="required" value="1992" min="1970" max="2014" />
-        <label for="make">* Make:</label>
-        <input type="text" name="make" id="make" class="required" />
-        <label for="model">* Model:</label>
-        <input type="text" name="model" id="model" class="required" />
-        <label for="repairs">* Repairs:</label><textarea></textarea>
+        <label>* First Name:</label>
+        <input type="text" name="firstname" id="firstname" class="required" value="" />
+        <label>* Last Name:</label>
+        <input type="text" name="lastname" id="lastname" class="required" value="" />
+        <label>* Year of Vehicle:</label>
+        <input type="range" name="year" id="year" class="required" value="1992" min="1970" max="2014" value="" /></br>
+        <label>* Make:</label>
+        <input type="text" name="make" id="make" class="required" value="" />
+        <label>* Model:</label>
+        <input type="text" name="model" id="model" class="required" value="" />
+        <label>* Repairs:</label>
+        <textarea name="repairs" id="repairs" class="required"></textarea value="" />
         <a href="#startpage">Home</a>
         <a href="#loaddatapage">Load Data Page</a> 
         <input id="save" name="submit" type="submit" data-theme="e" value="Save" />
-        <input id="edit" name="edit" type="hidden" data-theme="e" value="Edit" />
+        <input id="edit" name="edit" type="submit" data-theme="e" value="Edit" />
         <input id="reset" name="reset" type="reset" data-theme="e" value="Delete" />
        </div>
     </form>
