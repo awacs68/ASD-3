@@ -51,13 +51,14 @@ function getData(){
         var value = locaStorage.getItem(localStorage.key(i));
         var itemKey = localStorage.key(i);
         var item = JSON.parse(value);
-               
-          '<li>'+ item.fname[i]; +'</li>'+
-          '<li>'+ item.lname[i]; +'</li>'+
-          '<li>'+ item.year[i]; +'</li>'+
-          '<li>'+ item.make[i]; +'</li>'+
-          '<li>'+ item.model[i]; +'</li>'+
-          '<li>'+ item.repairs[i]; +'</li>'
+              
+          '<li>'+ item.fname[1]; +'</li>'+
+          '<li>'+ item.lname[1]; +'</li>'+
+          '<li>'+ item.year[1]; +'</li>'+
+          '<li>'+ item.make[1]; +'</li>'+
+          '<li>'+ item.model[1]; +'</li>'+
+          '<li>'+ item.repairs[1]; +'</li>'
+        
         }
       });
     }; 
