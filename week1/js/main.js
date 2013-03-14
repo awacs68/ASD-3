@@ -30,32 +30,37 @@ $('#form').on('pageinit', function(){
       localStorage.setItem(id, JSON.stringify(item));
   alert("Information Saved!");
  };
- 
+ });
 
 // Get Data Function //
 
-function getData(){
-  for (var i = 0; i < localStorage.length; i++){
-   $('form').append(localStorage.getItem(localStorage.key(i)));
-        var item = JSON.parse(value);
 
- // Populate the form fields with current localStorage values.
-    
-        $("#firstname").val = item.fname[i];
-        $("#lastname").val = item.lname[i];
-        $("#year").val = item.year[i];
-        $("#make").val = item.make[i];
-        $("#model").val = item.model[i];
-        $("#repairs").val = item.repairs[i];
-}
-    }
-    });
+ 
 // Delete Function //
 
 
 // Static Remote Data //
 
-$('#loaddatapage').on('pageinit', function(){ 
+$('#loaddatapage').on('pageinit', function(){
+
+function getData(){
+   $("#display").on('click', function(){
+  $('#dataloading').empty();
+
+  for (var i = 0; i < localStorage.length; i++){
+        var value = locaStorage.getItem(localStorage.key(i));
+        var itemKey = localStorage.key(i);
+        var item = JSON.parse(value);
+               
+          '<li>'+ item.fname[i]; +'</li>'+
+          '<li>'+ item.lname[i]; +'</li>'+
+          '<li>'+ item.year[i]; +'</li>'+
+          '<li>'+ item.make[i]; +'</li>'+
+          '<li>'+ item.model[i]; +'</li>'+
+          '<li>'+ item.repairs[i]; +'</li>'
+        }
+      });
+    }; 
 
 // Json Function //
 
