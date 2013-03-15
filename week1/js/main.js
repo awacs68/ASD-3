@@ -50,18 +50,20 @@ $('#loaddatapage').on('pageinit', function(){
         var value = locaStorage.getItem(localStorage.key(i));
         var itemKey = localStorage.key(i);
         var item = JSON.parse(value);
-           
+     $('#dataloading').append('' +  
         '<li>'+ item.fname[1]; +'</li>'+
         '<li>'+ item.lname[1]; +'</li>'+
         '<li>'+ item.year[1]; +'</li>'+
         '<li>'+ item.make[1]; +'</li>'+
         '<li>'+ item.model[1]; +'</li>'+
         '<li>'+ item.repairs[1]; +'</li>'
-        $('#dataloading').appendTo('li');
+        );
         };
+         
      }
 
   });
+
 // Json Function //
 
  $("#JSON").on('click', function(){
