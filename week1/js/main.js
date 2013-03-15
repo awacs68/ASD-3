@@ -43,26 +43,24 @@ $('#form').on('pageinit', function(){
 
 $('#loaddatapage').on('pageinit', function(){
   $("#display").on('click', function(){
-       
-    function getData(){
-  $('#dataloading').empty();
-     for (var i = 0; i < localStorage.length; i++) {
+     //$('#dataloading').empty();  
+    var getItem = function(){
+      for (var i = 0; i < localStorage.length; i++) {
         var value = localStorage.getItem(localStorage.key(i));
         var itemKey = localStorage.key(i);
         var item = JSON.parse(value);
-     $('#dataloading').appendTo(""+
-        '<li>'+ item.fname[1] +'</li>'+
-        '<li>'+ item.lname[1] +'</li>'+
-        '<li>'+ item.year[1] +'</li>'+
-        '<li>'+ item.make[1] +'</li>'+
-        '<li>'+ item.model[1] +'</li>'+
-        '<li>'+ item.repairs[1] +'</li>'
-        );
-        };
-         
-     }
-
-  });
+     $(''+
+       '<li>'+ item.fname[1] +'</li>'+
+       '<li>'+ item.lname[1] +'</li>'+
+       '<li>'+ item.year[1] +'</li>'+
+       '<li>'+ item.make[1] +'</li>'+
+       '<li>'+ item.model[1] +'</li>'+
+       '<li>'+ item.repairs[1] +'</li>'
+        ).appendTo('#dataloading');
+        
+      }
+      };
+    });
 
 // Json Function //
 
