@@ -47,14 +47,15 @@ $('#form').on('pageinit', function(){
 
 $('#loaddatapage').on('pageinit', function(){ 
   $('#display').on('click', function(){ 
-  
-var displayItems = function(){
+//  $("#dataloading").empty();
+var getItems = function(){
   for(var i = 0; i < localStorage.length; i++){
     var key = localStorage.key(i);
     var value = localStorage.getItem(key);
-    var getItem = JSON.parse(value);
+    var item = JSON.parse(value);
 
   $(''+
+    '<ol>'+ item.vehicle[1] +'</ol>'+
     '<li>'+ item.fname[1] +'</li>'+
     '<li>'+ item.lname[1] +'</li>'+
     '<li>'+ item.year[1] +'</li>'+
@@ -65,6 +66,7 @@ var displayItems = function(){
   }
  };
 });
+
 
 // Static Remote Data //
 // Json Function //
