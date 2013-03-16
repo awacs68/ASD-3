@@ -1,0 +1,98 @@
+<!-- Author: Mark McAninch -->
+<!-- ASD -->
+<!-- Term: 1303 -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    	<meta charset="utf-8" />
+    	<meta name="description" content="My Car App!" />
+    	<meta name="keywords" content="html5, mobile development, Full Sail University" />
+    	<meta name="robots" content="index, follow" />
+    	<meta name="viewport" content="user-scalable=no, width=device-width" />
+
+            <title>Customer Information App</title> 
+
+<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+      <meta name="HandheldFriendly" content="True">
+	    <meta name="MobileOptimized" content="320"/>
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Mobile IE needs ClearType for smoothing fonts -->
+	    <meta http-equiv="clear-type" content="on"/>    
+
+<!--Css files go here-->
+        
+	    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+      <link href="css/main.css" rel="stylesheet" type="text/css" />
+    </head>
+<body>
+<!-- Begin First Page -->
+<section id="startpage" data-role="page">
+ <header data-role="header"><h1>Mac's Garage</h1></header>
+  <h2>Owner Database</h2>
+   <div data-role="content"  id="cta"></div>
+    <img src="images/CTA.png" alt="cta">
+  <p> This app will save all of your customers data. Click the Form Page link below to get started. Thank you. </p> 
+    <a href="#form" data-theme="a" id="home">Form Page</a>
+   
+   <footer data-role="footer" data-position="fixed"><h1>McAninch Motors</h1></footer>  
+</section>
+<!-- Begin Second Page -->
+  <section id="form" data-role="page">
+   <header data-role="header"><h1>Mac's Garage</h1></header>
+    <form action="" method="post" id="ownerform">
+     <h1>Owner Information</h1>
+      <p> * Indicates Required Field </p>
+       <div>
+        <label for="firstname">* First Name:</label>
+        <input type="text" name="firstname" id="firstname" class="required" />
+        <label for="lastname">* Last Name:</label>
+        <input type="text" name="lastname" id="lastname" class="required" />
+        <label for="year">* Year of Vehicle:</label>
+        <input type="range" name="year" id="year" class="required" value="1992" min="1970" max="2014" />
+        <label for="make">* Make:</label>
+        <input type="text" name="make" id="make" class="required" />
+        <label for="model">* Model:</label>
+        <input type="text" name="model" id="model" class="required" />
+        <label for="repairs">* Repairs:</label><textarea></textarea>
+        <a href="#startpage">Home</a>
+        <a href="#loaddatapage">Load Data Page</a> 
+        <input id="save" name="submit" type="submit" data-theme="e" value="Save" />
+        <input id="edit" name="edit" type="submit" data-theme="e" value="Edit" />
+        <input id="reset" name="reset" type="reset" data-theme="e" value="Delete" />
+       </div>
+    </form>
+    <footer data-role="footer" data-position="fixed"><h1>McAninch Motors</h1></footer>
+  </section>
+<!-- Begin second page -->
+<section id="loaddatapage" data-role="page">
+   <header data-role="header"><h1>Mac's Garage</h1></header>
+    <h2>Load the data</h2>
+      <ul id="dataloading">
+        <li>Data loads here</li>
+      </ul>
+<footer>
+ <nav>
+   <div data-role="navbar" data-position="fixed">
+    <ul>
+     <li><a href="#startpage" data-theme="a" id="page">Home</a></li>
+     <li><a href="#" data-theme="e" id="display">Display</a></li>
+     <li><a href="#" data-theme="e" id="JSON">JSON</a></li>
+     <li><a href="#" data-theme="e" id="XML">XML</a></li>
+    </ul>
+   </div>
+ </nav>
+</footer>
+</section>
+
+  <!-- JavaScript -->
+        <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script> 
+        <script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+  <!--  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script> -->
+        <script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
+        <script src="js/json.js" type="text/javascript"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>        
