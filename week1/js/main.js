@@ -30,35 +30,31 @@ $('#form').on('pageinit', function(){
       localStorage.setItem(id, JSON.stringify(item));
   alert("Information Saved!");
  };
+  }); 
+
+// Display Function //
+
+$('#display').on('click', function(){ 
+  
+
+ var getData = function(){
+   for(var i = 0; i < localStorage.length; i++){
+      var key = localStorage.key(i);
+      var value = localStorage.getItem(key);
+      var obj = JSON.parse(value);
+
+  $(''+
+      '<li>'+ item.fname[1] +'</li>'+
+      '<li>'+ item.lname[1] +'</li>'+
+      '<li>'+ item.year[1] +'</li>'+
+      '<li>'+ item.make[1] +'</li>'+
+      '<li>'+ item.model[1] +'</li>'+
+      '<li>'+ item.repairs[1] +'</li>'
+      ).appendTo('form');
+}
+ };
  });
 
-// Edit Function //
-
-$('#edit').on('click', function(){ 
-  
-  var myForm = $('#ownerform');
-        myForm.validate({
-      invalidHandler: function(myForm, validator) {},
-      submitHandler: function() {
-    var data = myForm.serializeArray();
-    getData(data);
-    }
-  });
- var getData = function(key){
- var id = Math.floor(Math.random()*1000001);
- var item = {}; 
-  $('#firstname').val('Mark');
-  $('#lastname').val('McAninch');
-  $('#year').val('2000');
-  $('#make').val('GMC');
-  $('#model').val('Jimmy');
-  $('#repairs').val('Changed, wheel, bearing');
-localStorage.getItem(id, JSON.stringify(item));
-  alert("The form will be populated with dummy data!");
- };
- 
-});
-  
 
  
 // Delete Function //
