@@ -48,21 +48,19 @@ $('#form').on('pageinit', function(){
 $('#loaddatapage').on('pageinit', function(){ 
   $('#display').on('click', function(){ 
 //  $("#dataloading").empty();
-var getItems = function(){
+var getItem = function(){
   for(var i = 0; i < localStorage.length; i++){
     var key = localStorage.key(i);
     var value = localStorage.getItem(key);
     var item = JSON.parse(value);
-
   $(''+
-    '<ol>'+ item.vehicle[1] +'</ol>'+
     '<li>'+ item.fname[1] +'</li>'+
     '<li>'+ item.lname[1] +'</li>'+
     '<li>'+ item.year[1] +'</li>'+
     '<li>'+ item.make[1] +'</li>'+
     '<li>'+ item.model[1] +'</li>'+
     '<li>'+ item.repairs[1] +'</li>'
-    ).appendTo('#dataloading');
+    ).append('#dataloading');
   }
  };
 });
@@ -72,7 +70,7 @@ var getItems = function(){
 // Json Function //
 
  $("#JSON").on('click', function(){
-$("#dataloading").empty();
+  $("#dataloading").empty();
 
   $.ajax({
     url: 'xhr/data.json',
@@ -91,6 +89,7 @@ $("#dataloading").empty();
                 '<li>'+ myJson.model +'</li>'+
                 '<li>'+ myJson.repairs +'</li>'
                 ).appendTo('#dataloading');
+
             };
     }   
      });   
