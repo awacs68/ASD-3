@@ -47,12 +47,12 @@ $('#form').on('pageinit', function(){
 
 $('#loaddatapage').on('pageinit', function(){ 
   $('#display').on('click', function(){ 
-//  $("#dataloading").empty();
 var getItem = function(){
   for(var i = 0; i < localStorage.length; i++){
     var key = localStorage.key(i);
     var value = localStorage.getItem(key);
     var item = JSON.parse(value);
+  
   $(''+
     '<li>'+ item.fname[1] +'</li>'+
     '<li>'+ item.lname[1] +'</li>'+
@@ -60,11 +60,11 @@ var getItem = function(){
     '<li>'+ item.make[1] +'</li>'+
     '<li>'+ item.model[1] +'</li>'+
     '<li>'+ item.repairs[1] +'</li>'
-    ).append('#dataloading');
+    ).appendTo('#dataloading');
   }
  };
+getItem();
 });
-
 
 // Static Remote Data //
 // Json Function //

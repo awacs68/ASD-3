@@ -1,9 +1,8 @@
-<!DOCTYPE html>
 <!-- Author: Mark McAninch -->
 <!-- ASD -->
 <!-- Term: 1303 -->
 
-
+<!DOCTYPE html>
 <html lang="en">
     <head>
     	<meta charset="utf-8" />
@@ -56,7 +55,8 @@
         <input type="text" name="make" id="make" class="required" />
         <label for="model">* Model:</label>
         <input type="text" name="model" id="model" class="required" />
-        <label for="repairs">* Repairs:</label><textarea></textarea>
+        <label for="repairs">* Repairs:</label>
+        <textarea id="repairs"></textarea>
         <a href="#startpage">Home</a>
         <a href="#loaddatapage">Load Data Page</a> 
         <input id="save" name="submit" type="submit" data-theme="e" value="Save" />
@@ -71,14 +71,14 @@
    <header data-role="header"><h1>Mac's Garage</h1></header>
     <h2>Load the data</h2>
       <ul id="dataloading">
-        <li>Data loads here</li>
+        <li>All the data loads here</li>
       </ul>
 <footer>
  <nav>
    <div data-role="navbar" data-position="fixed">
     <ul>
      <li><a href="#startpage" data-theme="a" id="page">Home</a></li>
-     <li><a href="#" data-theme="e" id="display">Display</a></li>
+     <li><a href="#" data-theme="e" id="display">Display Local Storage</a></li>
      <li><a href="#" data-theme="e" id="JSON">JSON</a></li>
      <li><a href="#" data-theme="e" id="XML">XML</a></li>
     </ul>
