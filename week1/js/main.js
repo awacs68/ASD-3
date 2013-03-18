@@ -31,17 +31,6 @@ $('#form').on('pageinit', function(){
   alert("Information Saved!");
  };
  });
-// Display Function //
-
-
- 
- 
-
- 
-// Delete Function //
-
-
-
 
 // Display Function //
 
@@ -65,6 +54,27 @@ var getItem = function(){
  };
 getItem();
 });
+
+// Edit Function //
+//$('#edit').on('click', function(){});
+var editItem = function(){
+   var currentKey = $(this).attr("key");
+   var value = localStorage.getItem($(this).attr("key"));
+   var item = JSON.parse(value);
+      $('#fname').val(item.fname[1]);
+      $('#lname').val(item.lname[1]);
+      $('#year').val(item.year[1]);
+      $('#make').val(item.make[1]);
+      $('#model').val(item.model[1]);
+      $('#repairs').val(item.repairs[1]);
+   localStorage.removeItem(currentKey);
+   
+    
+  
+editItem();
+};
+
+
 
 // Static Remote Data //
 // Json Function //
