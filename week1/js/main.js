@@ -61,6 +61,7 @@ var editItem = function(){
    var currentKey = $(this).attr("key");
    var value = localStorage.getItem($(this).attr("key"));
    var item = JSON.parse(value);
+   alert('item');
       $('#fname').val(item.fname[1]);
       $('#lname').val(item.lname[1]);
       $('#year').val(item.year[1]);
