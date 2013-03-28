@@ -1,0 +1,27 @@
+<section id="form" data-role="page">
+   <header data-role="header"><h1>Mac's Garage</h1></header>
+    <form action="#" method="post" id="owner">
+     <h1>Owner Information</h1>
+      <p> * Indicates Required Field </p>
+       <div>
+        <label for="firstname">* First Name:</label>
+        <input type="text" name="firstname" id="firstname" class="required" />
+        <label for="lastname">* Last Name:</label>
+        <input type="text" name="lastname" id="lastname" class="required" />
+        <label for="year">* Year of Vehicle:</label>
+        <input type="range" name="year" id="year" class="required" value="1992" min="1970" max="2014" />
+        <label for="make">* Make:</label>
+        <input type="text" name="make" id="make" class="required" />
+        <label for="model">* Model:</label>
+        <input type="text" name="model" id="model" class="required" />
+        <label for="repairs">* Repairs:</label>
+        <textarea id="repairs"></textarea>
+        <a href="#startpage">Home</a>
+        <a href="#loaddatapage">Load Data Page</a> 
+        <input id="save" name="submit" type="submit" data-theme="e" value="Save" />
+        <input id="edit" name="edit" type="submit" data-theme="e" value="Edit" />
+        <input id="clear" name="clear" type="reset" data-theme="e" value="Delete" />
+       </div>
+    </form>
+    <footer data-role="footer" data-position="fixed"><h1>McAninch Motors</h1></footer>
+  </section>

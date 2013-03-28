@@ -31,8 +31,8 @@
   <h2>Owner Database</h2>
    <div data-role="content"  id="cta"></div>
     <img src="CTA.png" alt="cta">
-  <p> This app will save all of your customers data. Click the Form Page link below to get started. Thank you. </p> 
-    <a href="#form" data-theme="a" id="home">Form Page</a>
+  <p> This app will save all of your customers data. Click the Owners Page link below to get started. Thank you. </p> 
+    <a href="#loaddatapage" data-theme="a" id="home">Owners Page</a>
    
    <footer data-role="footer" data-position="fixed"><h1>McAninch Motors</h1></footer>  
 </section>
@@ -56,7 +56,7 @@
         <label for="repairs">* Repairs:</label>
         <textarea id="repairs"></textarea>
         <a href="#startpage">Home</a>
-        <a href="#loaddatapage">Load Data Page</a> 
+        <a href="#loaddatapage">Owners Page</a> 
         <input id="save" name="submit" type="submit" data-theme="e" value="Save" />
         <input id="edit" name="edit" type="submit" data-theme="e" value="Edit" />
         <input id="clear" name="clear" type="reset" data-theme="e" value="Delete" />
@@ -67,21 +67,19 @@
 <!-- Begin second page -->
 <section id="loaddatapage" data-role="page">
    <header data-role="header"><h1>Mac's Garage</h1></header>
-    <h2>Load the data</h2>
+    <h2>Vehicle Owners</h2>
       <ul id="dataloading" data-role="listview">
         <li>All the data loads here</li>
       </ul>
-    
-<footer>
+  
  <nav>
    <div data-role="navbar" data-position="fixed">
     <ul>
      <li><a href="#startpage" data-theme="a" id="page">Home</a></li>
-     <li><a href="#" data-theme="e" id="display">Display Local Storage</a></li>
+     <li><a href="#form" data-theme="e" id="ownpage">Form Page</a></li>
     </ul>
    </div>
  </nav>
-</footer>
 </section>
 
   <!-- JavaScript -->

@@ -1,25 +1,25 @@
 $('#loaddatapage').on("pageshow", function(){
-    $.couch.db("asd-3").view("asd-3app/owners",{
-        "success": function(data){
-            $('#loaddatapageitems').empty();
+         $.couch.db("asd-3").view("asd-3app/owners",{
+           success: function(data){
+             $('#dataloading').empty();
             $.each(data.rows, function(index, owner){
+           console.log(owner);
+                var fname = owner.value.fname;
                 var docId = owner.value.key;
                 var docRev = owner.value.rev;
-                var name = owner.value.name;
-            $('#loaddatapageitems').append(
+                
+            $('#dataloading').append(
                     $('<li>').append(
                         $('<a>').attr("href", "owner.html?owner=" + docId + "&docRev=" + docRev)
-                            .text(name)
+                            .text(fname)
                            
                       )
                   );
              });
-             $('#dataloadingitems').listview('refresh'); 
-        },
-        "error" : function(error, parseerror){
-console.log('Error!' + error);
-console.log('Error!' + parseerror);
-}
+             $('#dataloading').listview('refresh'); 
+        }
+        
+
     });
   });
  
